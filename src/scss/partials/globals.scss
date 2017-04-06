@@ -1,0 +1,56 @@
+/************************ GLOBALS ********************/
+html{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+body {
+	margin:0;
+   padding:0;
+   height:100%;
+	background: black;
+	width: 100%;
+}
+
+#app{
+	position: relative;
+	width: 100%;
+	//height:auto !important; /* real browsers */
+   height:100%; /* IE6: treaded as min-height*/
+
+   //min-height:100%; /* real browsers */
+}
+
+#fyc{
+	position: absolute;
+	width: 100%;
+	//height:auto !important; /* real browsers */
+   min-height:100%; /* IE6: treaded as min-height*/
+
+   //min-height:100%; /* real browsers */
+	background-color: $black;
+	background-repeat: no-repeat;
+	background-position: right top;
+	//background-size: cover;
+	//background-attachment: fixed;
+
+	//@media #{$body-background-resize} {
+		background-size: 100% auto;
+//	}
+}
+
+.clear{
+	clear:both;
+}
+
+
+.container-fluid{
+	margin-left: 35px;
+	margin-right: 35px;
+
+	@media #{$under-tablet}{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}

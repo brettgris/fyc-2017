@@ -1,0 +1,359 @@
+.showpage{
+	.showheader{
+		.videoplayer{
+			.videoInfo{
+				h1{
+
+				}
+
+				h4{
+					font-size: 21px;
+				}
+
+				p{
+					margin-bottom: 10px;
+					font-size: 16px;
+					text-align: justify;
+				}
+			}
+		}
+
+		.content{
+			.title-wrapper{
+				.title{
+					@include my-flex;
+					@include align-items(center);
+
+					@media #{$flex-break}{
+						display: block;
+					}
+
+					img {
+						display: inline-block;
+					   margin: 0;
+						padding: 0;
+					}
+
+					.season{
+						///text-transform: uppercase;
+    					font-size: 28px;
+						color: $light-grey;
+						font-weight: 500;
+
+						display:block;
+
+						@media #{$flex-break}{
+							margin-top: 10px;
+						}
+
+						@media #{$under-tablet}{
+							font-size: 21px;
+						}
+
+						&:before{
+							content: " ";
+							margin-left: 20px;
+
+							@media #{$flex-break}{
+								display: none;
+							}
+
+						}
+					}
+				}
+			}
+
+			.show-detail{
+				p{
+					margin-bottom: 10px;
+					font-size: 16px;
+					text-align: justify;
+				}
+
+				.buttons {
+
+				}
+			}
+
+
+
+			.awards{
+
+				.award-list{
+					@include my-flex;
+					@include my-align-items(center,center);
+					@include my-justify-content(flex-start,start);
+					@include my-flex-wrap(wrap);
+
+					.award-item{
+						margin-top: 15px;
+						margin-bottom: 15px;
+
+						p{
+							text-align: center;
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+
+		.videoplayer{
+			.videocode{
+				height: $video-height;
+				background: $video-background;
+			}
+		}
+	}
+
+	.episodes{
+		margin-top: $section-margin-top;
+		z-index: 2;
+
+		.episode-list{
+			margin-top: 15px;
+			@include my-flex;
+			@include my-align-items(flex-start,start);
+			@include my-flex-wrap(wrap);
+
+			@media #{$flex-break}{
+				display: block;
+			}
+
+			.episode{
+				margin-top: 10px;
+				margin-bottom: 10px;
+
+				@media #{$flex-break}{
+					width : 49%;
+				}
+
+				@media #{$under-phone}{
+					width : 100%;
+				}
+
+				a{
+					.image{
+						padding-top: (243/365)*100%;
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-color: black;
+						background-position: center center;
+						position: relative;
+
+						.overlay{
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							top: 0;
+							background: rgba($black,.65);
+							@include opacity(.01);
+							@include my-flex;
+							@include my-align-items(center,center);
+							@include my-justify-content(center,center);
+
+							transition: opacity .3s ease-in;
+
+							p{
+								font-size: 50px;
+								color: $white;
+								@include opacity(.01);
+								transition: opacity .3s ease-in;
+							}
+						}
+					}
+
+					&:hover{
+						.image{
+							.overlay{
+								@include opacity(1);
+
+								p{
+									@include opacity(1);
+									transition: opacity .3s ease-in .45s;
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+		}
+
+		/*.rowContainer{
+			clear:both;
+			overflow:hidden;
+			width: 100%;
+			position: relative;
+			height: $episode-height;
+
+			@media #{$under-tablet} {
+				width: 100% !important;
+				height: inherit;
+			}
+
+			.row{
+				height: $episode-height;
+				clear: both;
+				position: relative;
+
+				@media #{$under-tablet} {
+					width: 100% !important;
+					position:relative;
+					height: inherit;
+					left: 0 !important;
+				}
+
+				.page{
+					position: absolute;
+					top: 0;
+					left: 0%;
+					width: 100%;
+					@include opacity(1);
+
+					@media #{$under-tablet} {
+						position: relative;
+					}
+
+					.episode{
+						cursor: pointer;
+
+						@media #{$under-tablet} {
+							width: 100% !important;
+							margin: 0;
+						}
+
+						.wrapper{
+							.img {
+								@include box-shadow( 0px 0px 20px rgba(0,0,0,.5) );
+
+								@media #{$under-tablet} {
+									display: none !important;
+								}
+							}
+
+							&:hover{
+								img{
+									opacity: .8;
+								}
+							}
+						}
+					}
+				}
+
+				&.forward{
+					.page{
+						&.slider-enter {
+							left: 150%;
+							@include opacity(.01);
+						}
+
+						&.slider-enter.slider-enter-active {
+							left: 0%;
+							@include opacity(1);
+							@include transition-property(all);
+							@include transition-duration(.25s);
+							@include transition-timing-function(ease-in);
+						}
+
+						&.slider-leave {
+							left: 0%;
+							@include opacity(1);
+						}
+
+						&.slider-leave.slider-leave-active {
+							left: -150%;
+							@include opacity(.01);
+							@include transition-property(all);
+							@include transition-duration(.25s);
+							@include transition-timing-function(ease-in);
+						}
+					}
+				}
+
+				&.backward{
+					.page{
+						&.slider-enter {
+							left: -150%;
+							@include opacity(.01);
+						}
+
+						&.slider-enter.slider-enter-active {
+							left: 0%;
+							@include opacity(1);
+							@include transition-property(all);
+							@include transition-duration(.25s);
+							@include transition-timing-function(ease-in);
+						}
+
+						&.slider-leave {
+							left: 0%;
+							@include opacity(1);
+						}
+
+						&.slider-leave.slider-leave-active {
+							left:150%;
+							@include opacity(.01);
+							@include transition-property(all);
+							@include transition-duration(.25s);
+							@include transition-timing-function(ease-in);
+						}
+					}
+				}
+			}
+
+			.arrowbtn{
+				position: absolute;
+				height: $arrow-height;
+				width: $arrow-width;
+				top: $arrow-top-large;
+
+				&.prev{
+					left: $arrow-margin;
+					background: $next-arrow-background;
+					background-size: $arrow-width $arrow-height;
+				}
+
+				&.next{
+					right: $arrow-margin ;
+					background: $prev-arrow-background;
+					background-size: $arrow-width $arrow-height;
+				}
+
+				@media #{$medium} {
+					top: $arrow-top-medium;
+				}
+
+				@media #{$small} {
+					top: $arrow-top-small;
+				}
+
+				@media #{$under-tablet} {
+					display: none;
+				}
+			}
+		}
+			*/
+	}
+
+}
+
+.button{
+	color: #fff;
+	display: block;
+	border: 1px solid white;
+	height: 30px;
+	padding: 5px 20px;
+	float: left;
+	text-align: center;
+	margin-right: 15px;
+	cursor: pointer;
+	font-weight: normal;
+	white-space: nowrap;
+	margin-top: 10px;
+
+	@media #{$under-tablet}{
+		width: 200px;
+	}
+}

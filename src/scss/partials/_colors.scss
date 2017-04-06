@@ -1,0 +1,41 @@
+$imgPath: "../img/";
+
+/************************ SITE COLORS ********************/
+$black: #0a0906;
+$white: #fff;
+$light-grey: #ccc;
+$med-grey: #666;
+
+/************************ GLOBALS ********************/
+$body-bg: url( #{$imgPath}background2.jpg) $black top right no-repeat;
+
+/************************ TYPE ********************/
+$copy-color: $light-grey;
+$highlight-color: $white;
+$link-color: $light-grey;
+$link-hover: $light-grey;
+
+/************************ HEADER ********************/
+$logo-background: url( #{$imgPath}logo.png) center left no-repeat;
+
+/************************ LOGIN ********************/
+$login-background: rgba(0,0,0,.8);
+
+/************************ TRAILER ********************/
+$trailer-background: rgba(0,0,0,.8);
+
+/************************ SHOW LIST ********************/
+$quote-background: rgba(0,0,0,.8);
+
+/************************ SHOW PAGE ********************/
+$play-btn-background: url( #{$imgPath}playbtn.svg) left top no-repeat;
+$video-background: #000000;
+
+$prev-arrow-background: url(#{$imgPath}next.png) left top no-repeat;
+$next-arrow-background: url(#{$imgPath}prev.png) left top no-repeat;
+
+/************************ FOOTER ********************/
+$copyright-color: $med-grey;
+
+$menu-btn-color: $light-grey;
+$menu-color: rgba(0,0,0,.9);

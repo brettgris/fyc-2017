@@ -1,0 +1,25 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css";
+@import "../partials/font-awesome.scss";
+@import "compass/css3";
+@import "../../../node_modules/react-html5video/dist/ReactHTML5Video.scss";
+@import '../partials/_fonts.scss';
+
+/************************  VARIABLES  ************************/
+@import '../partials/_mixins.scss';
+@import '../partials/_sizes.scss';
+@import '../partials/_mediaqueries.scss';
+@import '../partials/_colors.scss';
+@import '../partials/_borders.scss';
+@import '../partials/_type.scss';
+
+/************************  GLOBALS  ************************/
+@import '../partials/globals.scss';
+
+/************************  PARTS  ************************/
+@import '../partials/headers.scss';
+@import '../partials/showpage.scss';
+@import '../partials/footers.scss';
+@import '../partials/login.scss';
+@import '../partials/menu.scss';
+@import '../partials/showlist.scss';
+@import '../partials/trailer.scss';

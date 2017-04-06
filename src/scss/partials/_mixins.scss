@@ -1,0 +1,35 @@
+@mixin my-flex{
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin my-flex-direction($direction){
+	-webkit-flex-direction: $direction;
+   -ms-flex-direction: $direction;
+   flex-direction: $direction;
+}
+
+@mixin my-flex-grow($value){
+	-webkit-flex: $value auto;
+   -ms-flex: $value auto;
+   flex: $value auto;
+}
+
+@mixin my-align-items($position,$ie){
+	-webkit-align-items: $position;
+	-ms-flex-align: $ie;
+	align-items: $position;
+}
+
+@mixin my-justify-content($position,$ie){
+	-webkit-justify-content: $position;
+   -ms-flex-pack: $ie;
+   justify-content: $position;
+}
+
+@mixin my-flex-wrap($wrap){
+	-webkit-flex-wrap: $wrap;
+   -ms-flex-wrap: $wrap;
+   flex-wrap: $wrap;
+}

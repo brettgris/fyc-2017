@@ -1,0 +1,126 @@
+$font-family: "Museo", Helvetica, Arial, sans-serif;
+
+/************************ BODY ********************/
+
+body{
+	color: $copy-color;
+	font-family: $font-family;
+	letter-spacing: 1.1px;
+}
+
+/************************ HEADERS ********************/
+h1{
+	color: $highlight-color;
+
+	.header &{
+		font-size: 24px;
+	}
+}
+
+h2{
+	color: $highlight-color;
+
+	font-weight:lighter !important;
+}
+
+h3{
+	color: $highlight-color;
+
+	.showlist & {
+		font-weight:lighter !important;
+	}
+
+	@media #{$under-tablet}{
+		font-size: 21px;
+	}
+}
+
+h4{
+	font-weight: 100;
+	color: $copy-color;
+}
+
+h5{
+	color: $copy-color;
+}
+
+h6{
+	color: $copy-color;
+}
+
+/************************ COPY ********************/
+
+p{
+	font-weight:100;
+	font-size:12px;
+	color: $copy-color;
+
+	margin: 0;
+	padding: 0;
+
+	@media #{$under-tablet} {
+		font-size: 12px !important;
+	}
+}
+
+.center{
+	text-align: center;
+}
+
+.highlight{
+	font-weight: normal;
+	color: $highlight-color;
+}
+
+/************************ LINKS ********************/
+a{
+	color: $link-color;
+	text-decoration: none !important;
+
+	&:hover, &:active{
+		color: $link-hover;
+	}
+
+	&:visited{
+		color: $link-color;
+	}
+}
+
+/************************ QUOTE STYLING ********************/
+.quote {
+	text-align: center;
+	font-weight: lighter;
+
+	@media #{$under-tablet} {
+		font-size: 16px !important;
+	}
+
+	h2{
+		font-size: 24px !important;
+		margin-top: 10px;
+
+		@media #{$under-tablet} {
+			font-size: 21px !important;
+		}
+	}
+
+	span{
+		width: 95% !important;
+		color: #ffffff;
+
+		&.quoter {
+			display:block;
+			padding-top: 3px;
+		}
+	}
+}
+
+/************************ FOOTER ********************/
+p.copyright{
+	font-size: 10px;
+	color: $copyright-color;
+
+	@media #{$under-tablet} {
+		font-size: 7px !important;
+	}
+}
