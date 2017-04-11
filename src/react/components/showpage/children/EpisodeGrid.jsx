@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import _ from 'underscore';
 
 import EpisodeItem from './EpisodeItem.jsx';
 
@@ -9,7 +10,7 @@ class EpisodeGrid extends Component{
 	}
 
 	render(){
-		let eps = this.props.data.episodes.find( (item)=>item.id );
+		let eps = _.find( this.props.data.episodes, (item)=>item.id );
 		if (!eps) return null;
 		//if (this.props.data.category==='movie'||!eps) ? " hide" : "";
 		return(

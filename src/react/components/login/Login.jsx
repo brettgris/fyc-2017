@@ -39,13 +39,13 @@ class Login extends Component{
 
 		return (
 			<div className="login">
-				<div className="container">
-					<div className="loginrow">
-						<div className="col-sm-4 col-sm-offset-4">
+				<div className="login-container">
+					<div>
+						<div>
 							<form onSubmit={this.handleSubmit}>
   								<div className={"form-group form-group-lg"+error}>
   									<label className="control-label" htmlFor="sitepassword">Login</label>
-  									<input type="text" className="form-control" id="sitepassword" placeholder="Enter Password" onChange={this.handleChange} value={this.state.password} aria-describedby="inputError2Status" />
+  									<input type="password" className="form-control" id="sitepassword" placeholder="Enter Password" onChange={this.handleChange} value={this.state.password} aria-describedby="inputError2Status" />
   									<span className={"glyphicon glyphicon-remove form-control-feedback"+markvisible} aria-hidden="true"></span>
   									<span id="inputError2Status" className="sr-only">(error)</span>
 

@@ -10,7 +10,6 @@ class ShowDetails extends Component{
 				<div className="showpage">
 					<HeaderManager data={this.props.data} episode={this.props.episode} show={this.props.show} guild={this.props.guild} />
 					<EpisodeGrid data={this.props.data} episode={this.props.episode} show={this.props.show} guild={this.props.guild} />
-
 				</div>
 			</div>
 		);

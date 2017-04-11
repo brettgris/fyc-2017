@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
+import _ from 'underscore';
 
 import VideoCode from './VideoCode.jsx';
 
@@ -10,7 +11,7 @@ class VideoPlayer extends Component{
 	}
 
 	render(){
-		let ep = this.props.data.episodes.find( (data,v)=>{
+		let ep = _.find(this.props.data.episodes, (data,v)=>{
 			this.id = v;
 			return data.number===this.props.episode.num;
 		});

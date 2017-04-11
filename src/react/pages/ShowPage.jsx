@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {setBackground, setGuild, setShow,setEpisode} from '../actions/actions.jsx';
+import _ from 'underscore';
 
 import Login from '../components/login/Login.jsx';
 import Trailer from '../components/trailer/Trailer.jsx';
@@ -42,9 +43,9 @@ class ShowPage extends Component{
 
 		return (
 			<div id="wrapper" className="page">
+				<ShowDetails data={this.props.show} episode={this.props.episode} guild={this.props.guild} show={this.props.show} />
 				<Trailer guild={this.props.guild} show={this.props.show} />
 				<Login guild={this.props.guild} show={this.props.show} />
-				<ShowDetails data={this.props.show} episode={this.props.episode} guild={this.props.guild} show={this.props.show} />
 			</div>
 		);
 	}
@@ -54,7 +55,8 @@ function mapStateToProps(state) {
 	let shows = null;
 	// // let data = null;
 	if (state.data&&state.guild) {
-		shows = state.data.shows.filter( (d)=>d.guilds.includes(state.guild) )
+		//shows = state.data.shows.filter( (d)=>d.guilds.indexOf(state.guild)>-1 )
+		shows = _.filter( state.data.shows, (d)=>_.contains(d.guilds,state.guild));
 
 		//---CATEGORIES---
 		// data = state.data.categories.map( (cat,key) => {
@@ -65,7 +67,9 @@ function mapStateToProps(state) {
 		// } );
 	}
 
-	let show = (state.data&&state.show) ? state.data.shows.find( (data)=>data.safename===state.show ) : null;
+	//let show = (state.data&&state.show) ? state.data.shows.find( (data)=>data.safename===state.show ) : null;
+
+	let show = (state.data&&state.show) ? _.find( state.data.shows, (data)=>data.safename===state.show) : null;
 
 	return {
 		shows: shows || null,

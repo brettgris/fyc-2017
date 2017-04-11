@@ -7,7 +7,15 @@
 	top: 0;
 	left: 0;
 
-	@include display-flex;
-	@include align-items(center);
-	@include justify-content(center);
+	@include my-flex;
+	@include my-align-items(center,center);
+	@include my-justify-content(center,center);
+
+	.login-container{
+		width: 400px;
+
+		@media (max-width:400px){
+			width: 90%;
+		}
+	}
 }

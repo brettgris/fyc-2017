@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 import {showHideMenu} from '../../actions/actions.jsx';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import MenuItem from './children/MenuItem.jsx';
+import _ from 'underscore';
 
 class Menu extends Component {
 	constructor(props){
@@ -65,7 +66,8 @@ function mapStateToProps(state) {
 	let shows = null;
 
 	if (state.data&&state.guild) {
-		shows = state.data.shows.filter( (d)=>d.guilds.includes(state.guild) )
+		//shows = state.data.shows.filter( (d)=>d.guilds.indexOf(state.guild)>-1 )
+		shows = _.filter( state.data.shows, (d)=>_.contains(d.guilds,state.guild));
 	}
 
 	return {

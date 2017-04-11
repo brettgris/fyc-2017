@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router'
+import _ from 'underscore';
 
 import AwardList from './AwardList.jsx';
 
@@ -26,7 +27,7 @@ class ShowHeader extends Component{
 	}
 
 	handleEpisodeButton(){
-		let eps = this.props.data.episodes.find( (item)=>item.id );
+		let eps = _.find (this.props.data.episodes, (item)=>item.id );
 		if (!eps) return null;
 
 		return (

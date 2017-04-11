@@ -8,11 +8,11 @@ class Trailer extends Component{
 		if (this.props.episode.num!=="trailer") return null;
 		return(
 			<div className="trailer">
-				<div className="container col-md-9">
+				<div className="trailer-container">
 					<Link className="exitbtn" to={`/${this.props.guild}/${this.props.show.safename}`}>
 						<img src="/img/exit.png" />
 					</Link>
-					<Video width="100%" controls unmuted autoplay>
+					<Video width="100%" controls unmuted autoPlay>
 						<source src={`../img/video/${this.props.show.safename}.mp4`} type="video/mp4" />
 	  				</Video>
 				</div>

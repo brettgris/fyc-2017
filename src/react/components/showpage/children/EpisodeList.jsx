@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import _ from 'underscore';
 
 import EpisodeItem from './EpisodeItem.jsx';
 
@@ -55,7 +56,7 @@ class EpisodeList extends Component{
 	}
 
 	render(){
-		let eps = this.props.data.episodes.find( (item)=>item.ids );
+		let eps = _.find (this.props.data.episodes, (item)=>item.id );
 		let visible = (this.props.data.category==='movie'||eps) ? " hide" : "";
 
 

@@ -7,15 +7,19 @@
 	top: 0;
 	left: 0;
 
-	@include display-flex;
-	@include align-items(center);
-	@include justify-content(center);
+	@include my-flex;
+	@include my-align-items(center,center);
+	@include my-justify-content(center,center);
 
-	.container{
+	.trailer-container{
+		width: 75%;
+		position: relative;
+
 		.exitbtn{
 			position: absolute;
 			z-index: 1;
 			top: -50px;
+			display:block;
 		}
 	}
 }

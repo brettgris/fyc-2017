@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {setBackground, setGuild} from '../actions/actions.jsx';
+import _ from 'underscore';
 
 import Shows from '../components/shows/Shows.jsx';
 
@@ -26,7 +27,8 @@ function mapStateToProps(state) {
 	let shows = null;
 	// // let data = null;
 	if (state.data&&state.guild) {
-		shows = state.data.shows.filter( (d)=>d.guilds.includes(state.guild) )
+		//shows = state.data.shows.filter( (d)=>d.guilds.indexOf(state.guild)>-1 )
+		shows = _.filter( state.data.shows, (d)=>_.contains(d.guilds,state.guild));
 
 		//---CATEGORIES---
 		// data = state.data.categories.map( (cat,key) => {

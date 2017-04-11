@@ -342,7 +342,7 @@
 }
 
 .button{
-	color: #fff;
+	color: #fff !important;
 	display: block;
 	border: 1px solid white;
 	height: 30px;
@@ -358,4 +358,5 @@
 	@media #{$under-tablet}{
 		width: 200px;
 	}
+
 }
