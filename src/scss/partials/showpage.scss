@@ -116,16 +116,18 @@
 			@include my-align-items(flex-start,start);
 			@include my-flex-wrap(wrap);
 
-			@media #{$flex-break}{
+			@media #{$under-phone}{
 				display: block;
 			}
 
 			.episode{
-				margin-top: 10px;
-				margin-bottom: 10px;
+				overflow: hidden;
+				@include my-flex-grow(0);
+				width : 31.3%;
+				margin: 1% 1%;
 
 				@media #{$flex-break}{
-					width : 49%;
+					width : 48%;
 				}
 
 				@media #{$under-phone}{

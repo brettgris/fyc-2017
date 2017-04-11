@@ -9,7 +9,7 @@ class EpisodeItem extends Component{
 			backgroundImage: 'url(/img/episode/'+this.props.show.safename+'/'+this.props.data.number+'.jpg)'
 		}
 		return(
-			<div className="episode col-sm-4">
+			<div className="episode">
 				<Link className="wrapper" to={`/${this.props.guild}/${this.props.show.safename}/${this.props.data.number}`}>
 					<div className="image" style={style}>
 						<div className="overlay">

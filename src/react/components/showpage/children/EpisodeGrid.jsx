@@ -15,7 +15,7 @@ class EpisodeGrid extends Component{
 		return(
 			<div className={"episodes"}>
 				<h3>Episodes</h3>
-				<div className="episode-list row">
+				<div className="episode-list">
 					{ this.createEpisodes() }
 				</div>
 			</div>

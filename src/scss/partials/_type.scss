@@ -52,14 +52,14 @@ h6{
 
 p{
 	font-weight:100;
-	font-size:12px;
+	font-size:16px;
 	color: $copy-color;
 
 	margin: 0;
 	padding: 0;
 
 	@media #{$under-tablet} {
-		font-size: 12px !important;
+		font-size: 14px !important;
 	}
 }
 

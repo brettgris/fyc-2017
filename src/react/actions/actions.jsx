@@ -29,7 +29,6 @@ export function fetchData(dispatch){
 			Promise.all(arr).then( function(results){
 				data.shows.forEach( (show,k)=>{
 					if (results[k]){
-						console.log( results[k])
 						show.episodes = show.episodes.map( (episode,num)=>{
 							episode.id = results[k].videoIds[num];
 							return episode;
