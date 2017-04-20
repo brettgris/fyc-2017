@@ -10,7 +10,7 @@ class ShowHeader extends Component{
 			<div className="content">
 				<div className="title-wrapper">
 					<h1 className="title">
-						<img className="img img-responsive" src={`/img/titles/${this.props.data.safename}.png`} />
+						{ this.handleTitle() }
 						{ this.handleSeason() }
 					</h1>
 				</div>
@@ -24,6 +24,18 @@ class ShowHeader extends Component{
 				<AwardList data={this.props.data} guild={this.props.guild} />
 			</div>
 		);
+	}
+
+	handleTitle(){
+		if (this.props.data.film==="true"){
+			return (
+				<span>{this.props.data.name}</span>
+			);
+		}else {
+			return (
+				<img className="img img-responsive" src={`/img/titles/${this.props.data.safename}.png`} />
+			);
+		}
 	}
 
 	handleEpisodeButton(){
