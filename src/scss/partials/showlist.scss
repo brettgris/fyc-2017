@@ -20,25 +20,26 @@
 		padding-top: 0;
 
 		& .content{
-			//position: absolute;
-			//top: 0;
-			//left: 0;
-			@include my-flex;
-			@include my-align-items(center,center);
-			//height: 100%;
+			//@include my-flex;
+			//@include my-align-items(center,center);
 			width: 100%;
 
-			@include my-flex-wrap(wrap);
+			//@include my-flex-wrap(wrap);
 			height: inherit;
 			position: relative;
 
-			&:hover{
-				.show{
-					@include opacity(.6);
+			.category {
+				margin-bottom: 15px;
 
-					@media #{$flex-break}{
-						//@include opacity(1);
-					}
+				h3{
+					margin: 0 .5% 10px .5%;
+				}
+
+				.shows{
+					width: 100%;
+					@include my-flex;
+					@include my-align-items(center,center);
+					@include my-flex-wrap(wrap);
 				}
 			}
 
@@ -48,6 +49,7 @@
 				//height: 100%;
 				transition: all .5s;
 				position: relative;
+
 
 				width:32.3%;
 				margin: .5%;
@@ -68,34 +70,6 @@
 				@media #{$under-phone}{
 					width:99%;
 				}
-
-				// @media #{$flex-break}{
-				// 	&:nth-child(1) a{
-				// 		background-image: url(../img/key/americangods.jpg) !important;
-				// 	}
-				// 	&:nth-child(2) a{
-				// 		background-image: url(../img/key/whiteprincess.jpg) !important;
-				// 	}
-				// 	&:nth-child(3) a{
-				// 		background-image: url(../img/key/themissing.jpg) !important;
-				// 	}
-				// 	&:nth-child(4) a{
-				// 		background-image: url(../img/key/blacksails.jpg) !important;
-				// 	}
-				// 	&:nth-child(5) a{
-				// 		background-image: url(../img/key/ashvsevildead.jpg) !important;
-				// 	}
-				// 	&:nth-child(6) a{
-				// 		background-image: url(../img/key/blunttalk.jpg) !important;
-				// 	}
-				// 	&:nth-child(7) a{
-				// 		background-image: url(../img/key/survivorsremorse.jpg) !important;
-				// 	}
-				// 	&:nth-child(8) a{
-				// 		background-image: url(../img/key/power.jpg) !important;
-				// 	}
-				// }
-
 
 				a{
 					width: 100%;

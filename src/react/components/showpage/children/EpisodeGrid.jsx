@@ -11,7 +11,7 @@ class EpisodeGrid extends Component{
 
 	render(){
 		let eps = _.find( this.props.data.episodes, (item)=>item.id );
-		if (!eps) return null;
+		if (!eps||this.props.data.film==="true") return null;
 		//if (this.props.data.category==='movie'||!eps) ? " hide" : "";
 		return(
 			<div className={"episodes"}>

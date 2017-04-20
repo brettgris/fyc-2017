@@ -61,7 +61,7 @@ class EpisodeList extends Component{
 
 
 		return(
-			<div className={"episodes"+visible}>
+			<div className={"episodes"}>
 				<h3>EPISODES</h3>
 				{ this.createEpisodeList() }
 			</div>

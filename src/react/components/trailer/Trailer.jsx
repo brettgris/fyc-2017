@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
+import Video from 'react-html5video';
 
 class Trailer extends Component{
 	render(){
@@ -11,14 +12,28 @@ class Trailer extends Component{
 					<Link className="exitbtn" to={`/${this.props.guild}/${this.props.show.safename}`}>
 						<img src="/img/exit.png" />
 					</Link>
-					<div className="video-container">
-						<div className="video-player">
-							<iframe src={this.props.show.trailer+"?footer=false&cid=starzfyc2017trailer"} frameBorder="0" scrolling="no" width="100%" height="100%"></iframe>
-						</div>
-					</div>
+					{ this.renderTypeOfVideo() }
 				</div>
 			</div>
 		)
+	}
+
+	renderTypeOfVideo(){
+		if (this.props.show.film==="true"){
+			return (
+				<Video width="100%" controls unmuted autoPlay>
+					<source src={`../img/video/${this.props.show.safename}.mp4`} type="video/mp4" />
+				</Video>
+			);
+		} else {
+			return (
+				<div className="video-container">
+					<div className="video-player">
+						<iframe src={this.props.show.trailer+"?footer=false&cid=starzfyc2017trailer"} frameBorder="0" scrolling="no" width="100%" height="100%"></iframe>
+					</div>
+				</div>
+			)
+		}
 	}
 }
 

@@ -17,11 +17,11 @@ class MenuItem extends Component {
 
 	render(){
 		return (
-			<h3>
+			<div>
 				<Link onClick={this.handleClick} to={"/"+this.props.guild+"/"+this.props.data.safename} >
 					{this.props.data.name}
 				</Link>
-			</h3>
+			</div>
 		);
 	}
 };

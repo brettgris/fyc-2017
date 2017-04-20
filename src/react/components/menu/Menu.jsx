@@ -4,8 +4,10 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {showHideMenu} from '../../actions/actions.jsx';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import MenuItem from './children/MenuItem.jsx';
 import _ from 'underscore';
+
+//import MenuItem from './children/MenuItem.jsx';
+import MenuCategory from './children/MenuCategory.jsx';
 
 class Menu extends Component {
 	constructor(props){
@@ -52,26 +54,39 @@ class Menu extends Component {
 	}
 
 	createShows(){
-		if( !this.props.shows) return null;
+		if( !this.props.cats) return null;
 
-		return this.props.shows.map( (data,key)=>{
+		// return this.props.shows.map( (data,key)=>{
+		// 	return (
+		// 		<MenuItem key={"menuitem"+key} data={data} guild={this.props.guild} />
+		// 	)
+		// });
+
+		return this.props.cats.map( (data,key)=>{
 			return (
-				<MenuItem key={"menuitem"+key} data={data} guild={this.props.guild} />
+				<MenuCategory key={"menycat"+key} data={data} guild={this.props.guild} />
 			)
 		});
 	}
 };
 
 function mapStateToProps(state) {
-	let shows = null;
-
+	let cats = null;
+	//let shows = null;
 	if (state.data&&state.guild) {
-		//shows = state.data.shows.filter( (d)=>d.guilds.indexOf(state.guild)>-1 )
-		shows = _.filter( state.data.shows, (d)=>_.contains(d.guilds,state.guild));
+		//let shows = _.filter( state.data.shows, (d)=>_.contains(d.guilds,state.guild));
+
+		cats = state.data.categories.map( (cat,key)=>{
+			cat.shows = _.filter ( state.data.shows, (show,sk)=>{
+				return (show.category===cat.safename)&&( _.contains( show.guilds, state.guild ) );
+			})
+			return cat;
+		});
 	}
 
 	return {
-		shows: shows || null,
+		//shows: shows || null,
+		cats: cats || null,
 		menu: state.menu,
 		guild: state.guild
 	};

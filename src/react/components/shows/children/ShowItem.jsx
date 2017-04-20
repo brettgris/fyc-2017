@@ -23,12 +23,14 @@ class ShowItem extends Component {
 
 		//<div className="ta" style={taStyle}></div>
 
+		//onMouseOver={ ()=>this.props.handleHover(true) }
+		//nMouseOut={ ()=>this.props.handleHover(false) }
+
 		return (
 			<div className={"show"}>
 				<Link
 					onClick={this.handleClick}
-					onMouseOver={ ()=>this.props.handleHover(true) }
-					onMouseOut={ ()=>this.props.handleHover(false) }
+
 					to={"/"+this.props.guild+"/"+this.props.data.safename}
 					style={style}
 				>

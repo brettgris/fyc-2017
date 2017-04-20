@@ -44,9 +44,8 @@
 		}
 
 		h3{
-			text-align: right;
-			margin: 0;
-			margin-bottom: 10px;
+			text-align: left;
+			margin: 20px 0 10px 0;
 
 			@media #{$under-tablet} {
 				text-align: center;
@@ -54,6 +53,21 @@
 
 			a:hover{
 				color: $white;
+			}
+		}
+
+		div {
+			text-align: left;
+			@media #{$under-tablet} {
+				text-align: center;
+			}
+
+			a{
+				font-size: 18px;
+
+				&:hover{
+					color: $white;
+				}
 			}
 		}
 	}

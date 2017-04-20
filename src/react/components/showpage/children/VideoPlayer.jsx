@@ -23,15 +23,38 @@ class VideoPlayer extends Component{
 					<div className='videoBox col-md-6'>
 						<VideoCode vid={ep.id} />
 					</div>
-					<div className='videoInfo col-md-6'>
-						<h1>{this.props.data.name}</h1>
-						<h4>Ep {ep.number} - <span className="highlight">{ep.name}</span></h4>
-						<p> {ep.synopsis}</p>
-						{ this.handleNextEpisode() }
-					</div>
+					{ this.renderCopy() }
 				</div>
 			</div>
 		);
+	}
+
+	renderCopy(){
+		if (this.props.data.film==="true"){
+			return (
+				<div className='videoInfo col-md-6'>
+					<h1>{this.props.data.name}</h1>
+					{ this.handleSynopsis(this.props.data.description) }
+				</div>
+			)
+		} else {
+			return (
+				<div className='videoInfo col-md-6'>
+					<h1>{this.props.data.name}</h1>
+					<h4>Ep {ep.number} - <span className="highlight">{ep.name}</span></h4>
+					<p> {ep.synopsis}</p>
+					{ this.handleNextEpisode() }
+				</div>
+			)
+		}
+	}
+
+	handleSynopsis(syn){
+		return syn.map( (p,k)=>{
+			return (
+				<p key={"synopsis"+k}>{p}</p>
+			)
+		})
 	}
 
 	handleNextEpisode(){

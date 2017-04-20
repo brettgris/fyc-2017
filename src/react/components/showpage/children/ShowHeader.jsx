@@ -30,9 +30,17 @@ class ShowHeader extends Component{
 		let eps = _.find (this.props.data.episodes, (item)=>item.id );
 		if (!eps) return null;
 
-		return (
-			<Link className="episodeButton button" to={`/${this.props.guild}/${this.props.data.safename}/${this.props.data.episodes[0].number}`}>Watch Episodes</Link>
-		);
+		if ( this.props.data.film==="true" ) {
+			return (
+				<Link className="episodeButton button" to={`/${this.props.guild}/${this.props.data.safename}/${this.props.data.episodes[0].number}`}>Watch Film</Link>
+			);
+		} else {
+			return (
+				<Link className="episodeButton button" to={`/${this.props.guild}/${this.props.data.safename}/${this.props.data.episodes[0].number}`}>Watch Episodes</Link>
+			);
+		}
+
+
 	}
 
 	handleDescription(){

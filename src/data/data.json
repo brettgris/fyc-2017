@@ -3,12 +3,25 @@
         "name": "Emmy",
         "safename": "emmys"
     }],
+	 "categories":[
+		 {
+			 "name":"Drama",
+			 "safename":"drama"
+		 },{
+			 "name":"Comedy",
+			 "safename":"comedy"
+		 },{
+			 "name":"Documentary",
+			 "safename":"documentary"
+		 }
+	 ],
     "shows": [{
         "name": "American Gods",
         "safename": "americangods",
         "playlist": "5386330699001",
         "copyright": "American Gods &copy; 2015 FremantleMedia North America. All Rights Reserved.",
         "season": "Season One",
+		  "category": "drama",
         "color": "#ff0000",
         "description": [
             "When Shadow Moon is released from prison, he meets the mysterious Mr. Wednesday and a storm begins to brew, a storm that will change the course of his entire life. Left adrift by the recent death of his wife, and hired as Mr. Wednesday's bodyguard, Shadow finds himself in the center of a world that he struggles to understand—a hidden world where magic is real, where the Old Gods fear both irrelevance and the growing power of the New Gods. Mr. Wednesday seeks to build a coalition of Old Gods to defend their existence in this new America, and reclaim some of the influence that they've lost."
@@ -32,11 +45,27 @@
         },{
             "number": "103",
             "name": "Head Full of Snow",
-            "synopsis": "Shadow questions the terms of his employment when Mr. Wednesday informs him of his plan to rob a bank (because, naturally, every army needs a source of funding). And just when Shadow thought his life couldn't get any more complicated, he returns to his motel room to a surprising discovery."
+            "synopsis": "Shadow questions the terms of his employment when Mr. Wednesday informs him of his plan to rob a bank (because, naturally, every army needs a source of funding). And just when Shadow thought his life couldn’t get any more complicated, he returns to his motel room to a surprising discovery."
         },{
             "number": "104",
             "name": "Git Gone",
-            "synopsis": "Alternating between the past and the present, Laura's life and death are explored—how she met Shadow, how she died, and how exactly she came to be sitting on the edge of his motel room bed"
+            "synopsis": "Alternating between the past and the present, Laura’s life and death are explored—how she met Shadow, how she died, and how exactly she came to be sitting on the edge of his motel room bed."
+        },{
+            "number": "105",
+            "name": "Lemon Scented You",
+            "synopsis": "Trying to work things out with his dead and unfaithful wife, Shadow’s emotional reunion is interrupted when he and Mr. Wednesday are kidnapped by the New Gods."
+        },{
+            "number": "106",
+            "name": "A Murder of Gods",
+            "synopsis": "On the run after the New Gods’ show of force, Shadow and Mr. Wednesday seek safe haven with one of Mr. Wednesday’s oldest friends, Vulcan, God of the Fire and the Forge."
+        },{
+            "number": "107",
+            "name": "Prayer for Mad Sweeney",
+            "synopsis": "Her brief reunion with Shadow over far too quickly, Laura turns to an unlikely travel companion to find her way back to life, and back to Shadow. Mad Sweeney’s long, winding, and often tragic past is explored."
+        },{
+            "number": "108",
+            "name": "Come to Jesus",
+            "synopsis": "On the eve of war, Mr. Wednesday must recruit one more Old God: Ostara, né Easter, Goddess of the Dawn But winning her over will require making a good impression, and that is where Mr. Nancy comes in."
         }]
     }, {
         "name": "White Princess",
@@ -44,6 +73,7 @@
         "playlist": "5385589865001",
         "copyright": "The White Princess &copy; Company Television TWP Limited 2016. Artwork &copy; Starz Entertainment, LLC.",
         "season": "Season 1",
+		  "category": "drama",
         "color": "#1f1961",
         "textcolor2": "#8482be",
         "description": [
@@ -95,6 +125,7 @@
         "playlist": "5386330700001",
         "copyright": "The Missing &copy; TM2 Productions LTD 2016. All rights reserved. Artwork &copy; Starz Entertainment, LLC.",
         "season": "Season Two",
+		  "category": "drama",
         "color": "#547128",
         "description": [
             "A young British woman stumbles through the streets of her hometown in Germany and collapses. Her name is Alice Webster, and she has been missing for 11 years.",
@@ -149,6 +180,7 @@
         "playlist": "5386361878001",
         "copyright": "Black Sails &copy; 2017 STARZ Entertainment, LLC. All Rights Reserved.",
         "season": "Season Four",
+		  "category": "drama",
         "color": "#159c97",
         "description": [
             "Hundreds of British soldiers lie dead in a forest… the Royal Navy sails back to England in retreat… the West Indies are now a war zone, and the shores of New Providence Island have never been bloodier. With the help of Eleanor Guthrie, Woodes Rogers transforms Nassau into a fortress without walls, as Captain Flint amasses a fleet of unprecedented strength, hoping to strike the final blow against civilization and reshape the world forever. Meanwhile, from within the island… an insurgency builds, fueled by the legend of its exiled leader, whose name keeps grown men awake at night… the one they call \"Long John Silver.\""
@@ -208,6 +240,7 @@
         "playlist": "5386465328001",
         "copyright": "Ash vs Evil Dead &copy; 2016 Starz Entertainment, LLC. All Rights Reserved",
         "season": "Season Two",
+		  "category": "comedy",
         "color": "#2e52e6",
         "description": [
             "\"Ash vs Evil Dead,\" a 10-episode half-hour series, is the long-awaited follow-up to the classic horror film, <i>The Evil Dead</i>.",
@@ -270,11 +303,12 @@
         "playlist": "5386330698001",
         "copyright": "Blunt Talk &copy; 2016 MRC II Distribution Company, LP. All rights reserved. ",
         "season": "Season Two",
+		  "category": "comedy",
         "color": "#c23f27",
         "description": [
 			  "The second season of \"Blunt Talk\" finds Walter Blunt and his team on top of the network ratings, when Walter runs into an old flame, in town to investigate a conspiracy involving one of Los Angeles' most critical environmental threats. Rosalie, Jim, Celia, Martin, and Shelly (with all their various neuroses intact) are by Walter's side as he delves into his past, which leads him into a web of intrigue affecting the future of LA."
         ],
-        "trailer": "",
+        "trailer": "https://www.starz.com/videos/embed/28659520-0748-4ff9-a0b4-b182dca9f33e",
         "guilds": ["emmys"],
         "awards": {
             "emmys": [{
@@ -329,6 +363,7 @@
         "playlist": "5386330701001",
         "copyright": "Survivors Remorse &copy; 2016 Starz Entertainment, LLC. All Rights Reserved",
         "season": "Season 3",
+		  "category": "comedy",
         "color": "#b8891c",
         "description": [
             "Fame and fortune can't shield pro-basketballer Cam Calloway against tragedy. Each member of the Calloway family copes with the fallout of Uncle Julius' accident in their own way. Family bonds are tested as a new season of \"Survivor's Remorse\" explores themes of love and loss, the comforts and doubts found in religion, the danger of seeking out ancestral roots, the power of bad parenting, the pitfalls of public utterances, and the pain of dredging up the past. "
@@ -388,6 +423,7 @@
         "playlist": "5386330697001",
         "copyright": "Power &copy; 2016 Starz Entertainment, LLC. All Rights Reserved.",
         "season": "Season 3",
+		  "category": "drama",
         "color": "#c76228",
         "description": [
 			  "Executive Producer Curtis '50 Cent' Jackson and show creator Courtney A. Kemp (\"The Good Wife\") present the anticipated third season of the hit drama \"Power,\" steeped in the seductive nightlife of New York's elite and the violent underworld of international drug cartels.",
@@ -445,5 +481,32 @@
             "name": "In My Best Interest",
             "synopsis": "Ghost races to retrieve evidence, while he throws the party of his career. Tasha forms an unlikely alliance in an attempt to save her family. But will Tommy make a move that will change everyone's life forever?"
         }]
+    },{
+        "name": "After Spring",
+        "safename": "afterspring",
+        "playlist": "5404291721001",
+        "copyright": "After Spring &copy; 2016 After Spring LLC",
+        "season": "",
+		  "category": "documentary",
+        "color": "",
+		  "film": "true",
+        "description": [
+			  "Lorem Ipsum"
+        ],
+        "trailer": "https://www.starz.com/videos/embed/b4c7d44a-11db-49ea-b029-e64ec616f77b",
+        "guilds": ["emmys"],
+        "awards": {
+            "emmys": [{
+                "title": "Outstanding Drama Series",
+                "desc": "Award Name."
+            }]
+        },
+        "episodes": [
+			  {
+	            "number": "film",
+	            "name": "",
+	            "synopsis": ""
+	        }
+		]
     }]
 }

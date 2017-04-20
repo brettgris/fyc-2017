@@ -13,34 +13,34 @@ class GuildPage extends Component{
 	}
 
 	render(){
-		if (!this.props.shows) return null;
+		if (!this.props.cats) return null;
 
 		return (
 			<div id="#wrapper" className="page">
-				<Shows shows={this.props.shows} guild={this.props.guild} />
+				<Shows cats={this.props.cats} guild={this.props.guild} />
 			</div>
 		)
 	}
 };
 
 function mapStateToProps(state) {
-	let shows = null;
-	// // let data = null;
-	if (state.data&&state.guild) {
-		//shows = state.data.shows.filter( (d)=>d.guilds.indexOf(state.guild)>-1 )
-		shows = _.filter( state.data.shows, (d)=>_.contains(d.guilds,state.guild));
+	let cats = null;
+	//let shows = null;
 
-		//---CATEGORIES---
-		// data = state.data.categories.map( (cat,key) => {
-		// 	cat.shows = state.data.shows.filter( (show,key) => {
-		// 		return (show.guilds.includes(state.guild)&&show.category===cat.safename);
-		// 	});
-		// 	return cat;
-		// } );
+
+	if (state.data&&state.guild) {
+		//let shows = _.filter( state.data.shows, (d)=>_.contains(d.guilds,state.guild));
+
+		cats = state.data.categories.map( (cat,key)=>{
+			cat.shows = _.filter ( state.data.shows, (show,sk)=>{
+				return (show.category===cat.safename)&&( _.contains( show.guilds, state.guild ) );
+			})
+			return cat;
+		});
 	}
 
 	return {
-		shows: shows || null,
+		cats: cats || null,
 		guild: state.guild || ""
 	};
 }

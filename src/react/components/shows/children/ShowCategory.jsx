@@ -4,7 +4,7 @@ import ShowItem from './ShowItem.jsx';
 class ShowCategory extends Component{
 	render(){
 		return (
-			<div className={"category "+this.props.data.class}>
+			<div className={"category "+this.props.data.safename}>
 				<h3>{this.props.data.name}</h3>
 				<div className="shows">
 					{ this.createShows() }
