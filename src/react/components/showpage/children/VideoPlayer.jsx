@@ -23,13 +23,13 @@ class VideoPlayer extends Component{
 					<div className='videoBox col-md-6'>
 						<VideoCode vid={ep.id} />
 					</div>
-					{ this.renderCopy() }
+					{ this.renderCopy(ep) }
 				</div>
 			</div>
 		);
 	}
 
-	renderCopy(){
+	renderCopy(ep){
 		if (this.props.data.film==="true"){
 			return (
 				<div className='videoInfo col-md-6'>

@@ -8,16 +8,13 @@ class Authenticate{
 			emmys: "stazfycemmys2017"
 		}
 
-		//"37a7dac83cffb918fa54a6e9c2d4cfc0109dc79cc94adffdfc7a71794c2fd7f5"
 		this.values = {
-			emmys: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+			emmys: "1b3bfea7c77f1c4ca1464451438a7fe1072ef83840d0955b0cc9ddf8d5fa4ad7"
 		}
 	}
 
 	check(obj){
 		obj.a = obj.a || {};
-
-		//console.log( $.cookie( this.ck[obj.guild] ), this.values[obj.guild] )
 
 		if (obj.num && obj.num!=="trailer") {
 			if ( $.cookie( this.ck[obj.guild] ) !== this.values[obj.guild]) {
