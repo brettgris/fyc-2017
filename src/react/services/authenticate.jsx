@@ -9,7 +9,7 @@ class Authenticate{
 		}
 
 		this.values = {
-			emmys: "1b3bfea7c77f1c4ca1464451438a7fe1072ef83840d0955b0cc9ddf8d5fa4ad7"
+			emmys: "4e1285faa1b3b1f9e0e2c9b6fbfd8a90b4e2fbeb7c4abe60f8f6bc9c7f5530ad"
 		}
 	}
 
