@@ -14,7 +14,7 @@ class VideoCode extends Component{
 	componentDidMount(){
 		this.videoReady();
 	}
-	
+
 	componentDidUpdate(){
 		this.videoReady();
 	}
@@ -38,10 +38,10 @@ class VideoCode extends Component{
 
 	videoReady(){
 		if (this.props.vid && this.props.vid!=this.state.vid) {
-			$('.videocode').html( this.renderHTML(this.props.vid) );
+			$('.video-code').html( this.renderHTML(this.props.vid) );
 			brightcove.createExperiences();
 
-			$('.videocode object').height(350);
+			$('.video-code object').height('100%');
 
 			this.setState({
 				vid: this.props.vid
@@ -53,7 +53,9 @@ class VideoCode extends Component{
 
 	render(){
 		return(
-			<div className="videocode"></div>
+			<div className="video-wrapper">
+				<div className="video-code"></div>
+			</div>
 		);
 	}
 };

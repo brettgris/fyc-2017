@@ -27,15 +27,15 @@ class ShowHeader extends Component{
 	}
 
 	handleTitle(){
-		if (this.props.data.film==="true"){
-			return (
-				<span>{this.props.data.name}</span>
-			);
-		}else {
+		// if (this.props.data.film==="true"){
+		// 	return (
+		// 		<span>{this.props.data.name}</span>
+		// 	);
+		// }else {
 			return (
 				<img className="img img-responsive" src={`/img/titles/${this.props.data.safename}.png`} />
 			);
-		}
+		//}
 	}
 
 	handleEpisodeButton(){
